@@ -2,7 +2,7 @@
 <nav class="navbar is-transparent">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
-      <img src="../assets/head2bed.png" alt="Head 2 Bed Icon" width="112" height="28">
+      <img src="../assets/logo.png" alt="Head 2 Bed Icon" width="112" height="28">
     </a>
     <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
       <span></span>

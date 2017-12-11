@@ -1,22 +1,20 @@
 <template>
   <section id="app-body">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><router-link to="/foo">Go to Foo</router-link></li>
-      <li><router-link to="/bar">Go to Bar</router-link></li>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <div class="columns">
+      <div class="column hb-home-events">
+      </div>
+      <div class="column">
+        Second column
+      </div>
+      <div class="column">
+        Third column
+      </div>
+      <div class="column">
+        Fourth column
+      </div>
+    </div>
+      <router-link to="/foo">Go to Foo</router-link>
+      <router-link to="/bar">Go to Bar</router-link>
     </section>
 </template>
 
@@ -30,3 +28,17 @@ export default {
   }
 }
 </script>
+
+<style>
+
+  @media screen and (max-width: 1200px) {
+    .hb-home-events {
+      width: 100%;
+      height: 200px;
+      background-image: url('../assets/event.png');
+      background-position-y: -200px;
+      background-repeat: no-repeat;
+    }
+  }
+    
+</style>
