@@ -93,6 +93,11 @@ $color-accent: #E6E6FA;
   }
 }
 
+nav {
+  min-height: 10vh;
+  height: 10vh;
+  max-height: 10vh;
+}
 
 
 #app {
