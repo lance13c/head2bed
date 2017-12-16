@@ -1,21 +1,22 @@
 <template>
   <section id="app-body">
     <div class="columns">
-      <div class="column level">
-
-        <div class="hb-home-events"></div>
-
-        <h1 class="title">
-          <router-link to="/foo">Go to Foo</router-link>
+      <a href="#/events" class="column level hb-home-events">
+        <h1 class="title is-1">
+          <a href="#/events">Events</a>
         </h1>
         
-      </div>
-      <div class="column hb-home-learn">
-        Second column
-      </div>
-      <div class="column hb-home-volenteer">
-        Third column
-      </div>
+      </a>
+      <a href="#/learn" class="column hb-home-learn">
+        <h1 class="title is-1">
+          <a href="#/learn">Learn</a>
+        </h1>
+      </a>
+      <a href="#/learn" class="column hb-home-volenteer">
+        <h1 class="title is-1">
+          <a href="#/volenteer">Volenteer</a>
+        </h1>
+      </a>
     </div>
     </section>
 </template>
@@ -33,8 +34,23 @@ export default {
 
 <style lang="scss">
 
+  body {
+    font-family: 'Oswald', sans-serif;
+  }
+
   #app-body {
     padding-top: 12px;
+  }
+
+  @mixin tint {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all .2s linear;
   }
 
   .columns {
@@ -48,6 +64,7 @@ export default {
 
       .column {
         position: relative;
+        cursor: pointer;
         width: 100%;
         padding: 0;
         background-position-y: -150px;
@@ -63,35 +80,46 @@ export default {
           width: 100%;
           position: absolute;
           text-align: center;
-          top: 50%;
-          color: green;
+          top: 40%;
+          color: rgb(223, 223, 223);
+
         }
 
-        &:hover {
-          a {
-            color: purple;
-          }
+        &:hover a {
+          color: white;
         }
-        
+     
+     }
 
-      .hb-home-events {
-        height: 100%;
+     .hb-home-events {
         background-image: url('../assets/event.png');
+        height: 100%;
 
-        &:hover {
-          filter: sepia(1);
+        &:hover:before {
+          @include tint;
+          background: rgba(38, 0, 255, 0.1);
         }
       }
 
       .hb-home-learn {
           background-image: url('../assets/learn.png');
+          height: 100%;
+
+        &:hover:before {
+          @include tint;
+          background: rgba(144, 44, 172, 0.1);
+        }
       }
 
       .hb-home-volenteer {
           background-image: url('../assets/volunteer.png');
+          height: 100%;
+
+        &:hover:before {
+          @include tint;
+          background: rgba(109, 22, 58, 0.1);
+        }
       }
-     
-     }
 
 
     @media screen and (max-width: 1200px) {

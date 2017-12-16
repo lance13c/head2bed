@@ -1,21 +1,15 @@
 <template>
 <nav class="navbar is-transparent">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
+    <a class="navbar-item" href="#/">
       <img src="../assets/logo.png" alt="Head 2 Bed Icon" width="112" height="28">
     </a>
     <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-      <span></span>
-      <span></span>
-      <span></span>
     </div>
   </div>
 
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
-      <router-link to="/" class="navbar-item">
-        Home
-      </router-link>
       <router-link to="/events" class="navbar-item">
         Events
       </router-link>
