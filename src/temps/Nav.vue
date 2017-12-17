@@ -91,6 +91,8 @@ nav {
   min-height: 10vh;
   height: 10vh;
   max-height: 10vh;
+  box-shadow: 0 0 4px 0 gray;
+
 }
 
 

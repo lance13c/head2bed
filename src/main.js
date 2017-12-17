@@ -4,23 +4,27 @@ import VueRouter from 'vue-router'
 // Templetes
 import App from './App.vue';
 import Home from './temps/Home.vue';
+import Events from './temps/Events.vue';
+import Learn from './temps/Learn.vue';
 // import Nav from './temps/Nav.vue';
 
 // // Components
 // Vue.component('nav', Nav);
 
 let home = Vue.component('home', Home);
+let events = Vue.component('events', Events);
+let learn = Vue.component('learn', Learn);
 
 Vue.use(VueRouter);
 
 const Foo = { template: '<div>foo</div>' }
 const Bar = { template: '<div>bar</div>' }
-const Learn = { template: '<div>test</div>'}
 
 const routes = [
   { path: '/foo', component: Foo },
   { path: '/bar', component: Bar },
-  { path: '/learn', component: Learn},
+  { path: '/events', component: events},
+  { path: '/learn', component: learn},
   { path: '/', component: home}
 ]
 
