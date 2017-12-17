@@ -12,9 +12,9 @@
           <a href="#/learn">Learn</a>
         </h1>
       </a>
-      <a href="#/learn" class="column hb-home-volenteer">
+      <a href="#/learn" class="column hb-home-volunteer">
         <h1 class="title is-1">
-          <a href="#/volenteer">Volenteer</a>
+          <a href="#/volunteer">Volunteer</a>
         </h1>
       </a>
     </div>
@@ -110,7 +110,7 @@ export default {
         }
       }
 
-      .hb-home-volenteer {
+      .hb-home-volunteer {
           background-image: url('../assets/volunteer.png');
           height: 100%;
 

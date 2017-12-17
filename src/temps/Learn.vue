@@ -56,7 +56,7 @@
 
     .hb-about {
         padding-top: 10px;
-        padding-right: 10px;
+        padding-right: 80px;
         
         h1 {
             color: rgb(31, 147, 192);

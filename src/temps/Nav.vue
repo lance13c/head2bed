@@ -74,6 +74,7 @@ export default {
 <style lang="scss">
 
 $color-accent: #E6E6FA;
+$color-accent2: rgb(174, 174, 219);
 
 .hb-social-media-btns {
   p {
@@ -88,11 +89,32 @@ $color-accent: #E6E6FA;
 }
 
 nav {
-  min-height: 10vh;
-  height: 10vh;
-  max-height: 10vh;
   box-shadow: 0 0 4px 0 gray;
+}
 
+.navbar {
+  min-height: 6.25rem;
+
+  .navbar-brand {
+    img {
+      max-height: 6.25rem;
+    }
+
+    &:hover {
+        background-color: rgba(141, 19, 141, 0.048);
+      }
+  }
+
+  .navbar-start {
+    a {
+      font-size: 2rem;
+      margin: 0 20px;
+
+      &:hover {
+        color: $color-accent2;
+      }
+    }
+  }
 }
 
 
