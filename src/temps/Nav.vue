@@ -13,11 +13,11 @@
       <router-link to="/events" class="navbar-item">
         Events
       </router-link>
-      <router-link  to="/learn" class="navbar-item" href="https://bulma.io/">
+      <router-link  to="/learn" class="navbar-item">
         Learn
       </router-link>
-      <router-link to="/volenteer" class="navbar-item" href="https://bulma.io/">
-        Volenteer
+      <router-link to="/volunteer" class="navbar-item">
+        Volunteer
       </router-link>
       
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="columns hb-events-columns">
+  <div class="columns hb-events-columns" v-on="{ load: initMap}">
       <div class="column is-one-third">
         <ul class="hb-events-list">
             <li>
@@ -235,23 +235,28 @@
         });
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        initMap();
-    });
+    export default {
+        name: 'events',
+        methods: {
+            initMap: initMap
+        },
+        mounted: function () {
+  		    this.initMap();
+  	    },
+    }
 </script>
 
 
 
 <style lang="scss">
 
-.hb-events-columns {
-    .column {
-        padding-right: 0;
-        padding-left: 0;
+    .hb-events-columns {
+        .column {
+            padding-right: 0;
+            padding-left: 0;
 
+        }
     }
-}
-
 
     #events-map {
         width: 100%;

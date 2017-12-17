@@ -38,10 +38,6 @@ export default {
     font-family: 'Oswald', sans-serif;
   }
 
-  #app-body {
-    padding-top: 12px;
-  }
-
   @mixin tint {
     content: "";
     display: block;
@@ -53,7 +49,10 @@ export default {
     transition: all .2s linear;
   }
 
-  .columns {
+  #app-body {
+    padding-top: 12px;
+
+    .columns {
      height: 90vh;
      min-height: 90vh;
 
@@ -129,6 +128,7 @@ export default {
         background-position-y: -200px;
       }
     }
+  }
   }
     
 </style>
