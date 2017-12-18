@@ -1,5 +1,10 @@
 <template>
-  <div class="columns hb-events-columns" v-on="{ load: initMap}">
+  <div class="columns hb-events-columns">
+
+      <div class="column is-mobile">
+          <div id="events-map2" class="hb-map"></div>
+      </div>
+
       <div class="column is-one-third">
         <ul class="hb-events-list">
             <li>
@@ -165,10 +170,13 @@
         </ul>
     </div>
       
-      <div class="column">
-          <div id="events-map"></div>
+      <div class="column is-desktop">
+          <div id="events-map" class="hb-map"></div>
       </div>
+
     </div>
+
+
 </template>
 
 <script>
@@ -178,7 +186,13 @@
         let event1 = {lat: 43.084392, lng: -77.668440};
         let event2 = {lat: 43.084909, lng: -77.668004};
         let event3 = {lat: 43.085485, lng: -77.667661};
-        let map = new google.maps.Map(document.getElementById('events-map'), {
+        let el = document.getElementById('events-map');
+
+        if (!el || getComputedStyle(el, null).display == "none") {
+            el = document.getElementById('events-map2');
+        }
+
+        let map = new google.maps.Map(el , {
             zoom: 17,
             center: dorms
         });
@@ -233,7 +247,7 @@
         markerEvent3.addListener('click', function() {
           markerEvent3.infowindow.open(map, markerEvent3);
         });
-    }
+    };
 
     export default {
         name: 'events',
@@ -251,20 +265,81 @@
 <style lang="scss">
 
     .hb-events-columns {
+        margin-top: 2px;
+
         .column {
             padding-right: 0;
             padding-left: 0;
-
+            padding: 0;
         }
     }
 
     #events-map {
         width: 100%;
         height: 100%;
-        z-index: -1;
+        z-index: 0;
+        position: relative;
     }
 
+    #events-map2 {
+        height: 100%;
+            margin-left: 15px;
+        width: 98%;
+        z-index: 0;
+        position: relative;
+    }
+
+    @media screen and (max-width: 1200px){
+        #events-map {
+            height: 300px;
+        }
+
+        #events-map2 {
+            height: 300px;
+        }
+
+        .is-mobile {
+            display: block;   
+            
+            .hb-map {
+                display: block;
+            }
+        }
+
+        .is-desktop {
+            display: none; 
+
+            
+            .hb-map {
+                display: none;
+            }  
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .is-mobile {
+            display: none;   
+
+            .hb-map {
+                display: none;
+            }
+        }
+
+        .is-desktop {
+            display: block; 
+
+            
+            .hb-map {
+                display: block;
+            }  
+        }
+        
+    }
+
+
     .hb-events-list {
+        z-index: 2;
+        position: relative;
         box-shadow: 0px -2px 4px 0px gray;
         max-height: 90vh;
 

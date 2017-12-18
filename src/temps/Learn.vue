@@ -56,6 +56,7 @@
 
     .hb-about {
         padding-top: 10px;
+        padding-left: 25px;
         padding-right: 80px;
         
         h1 {

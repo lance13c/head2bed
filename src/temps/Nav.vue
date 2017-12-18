@@ -133,7 +133,9 @@ nav {
 }
 
 .navbar {
+  z-index: 5;
   min-height: 6.25rem;
+  width: 101%;
 
   .navbar-brand {
     img {
