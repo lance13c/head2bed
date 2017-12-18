@@ -12,7 +12,7 @@
           <a href="#/learn">Learn</a>
         </h1>
       </a>
-      <a href="#/learn" class="column hb-home-volunteer">
+      <a href="#/volunteer" class="column hb-home-volunteer">
         <h1 class="title is-1">
           <a href="#/volunteer">Volunteer</a>
         </h1>
